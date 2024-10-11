@@ -1,0 +1,59 @@
+<!--// Approach 1-->
+<!--<suite parallel="classes" name="Suite">-->
+<!--    <test thread-count="5" parallel="classes" name="Test">-->
+<!--        <classes>-->
+<!--            <class name="TestE2E"/>-->
+<!--            <class name="TestDemoEdge"/>-->
+<!--            <class name="TestDemoFirefox"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--</suite>-->
+
+<!--// Approach 2-->
+<suite name="Suite" parallel="classes" thread-count="5">
+
+    <test name="Selenium Test with Chrome">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="TestE2E"/>
+        </classes>
+    </test>
+
+    <test name="Selenium Test with Firefox">
+        <parameter name="browser" value="firefox"/>
+        <classes>
+            <class name="TestE2E"/>
+        </classes>
+    </test>
+
+    <test name="Selenium Test with Edge">
+        <parameter name="browser" value="MicrosoftEdge"/>
+        <classes>
+            <class name="TestE2E"/>
+        </classes>
+    </test>
+</suite>
+
+<!--//Approach 3-->
+<!--<suite name="Suite" parallel="tests" thread-count="5">-->
+<!--    <test name="Selenium Test with Chrome">&ndash;&gt;-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <classes>-->
+<!--            <class name="TestDemoEdge"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Selenium Test with Firefox">-->
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <classes>-->
+<!--            <class name="TestDemoEdge"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="Selenium Test with Edge">-->
+<!--        <parameter name="browser" value="MicrosoftEdge"/>-->
+<!--        <classes>-->
+<!--            <class name="TestDemoEdge"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--</suite>-->
